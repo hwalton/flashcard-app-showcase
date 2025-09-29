@@ -1,0 +1,25 @@
+{{ define "content" }}
+<!-- Flashcard panel and buttons -->
+<div class="w-full bg-gray-100 py-1.5 flex justify-center">
+  <div class="w-full max-w-2xl">
+
+    <!-- Flashcard content loads here -->
+    <div id="flashcard"
+         hx-get="/flashcard/front"
+         hx-trigger="load"
+         hx-swap="innerHTML">
+      Loading flashcard...
+    </div>
+
+    <!-- Buttons below card (Edit right, Settings left) -->
+    <div class="flex justify-between items-center px-1">
+      <a href="/settings"
+         class="btn-blue">
+        Settings
+      </a>
+      <div id="card-button-container"></div>
+    </div>
+
+  </div>
+</div>
+{{ end }}

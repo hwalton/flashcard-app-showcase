@@ -1,0 +1,15 @@
+<div class="w-full bg-gray-100 flex justify-center">
+    <div class="bg-white shadow-md rounded px-6 pb-6 pt-4 w-full max-w-2xl text-center">
+      
+    <div class="text-gray-600 w-full flex justify-end">
+        <span>
+            {{ .StreakEmoji }} Streak: <span class="font-bold text-orange-600">{{ .StreakCount }}</span>
+        </span>
+    </div>
+
+    <h2 class="text-xl font-bold mb-4">No more cards due!</h2>
+    <p class="mb-4">Good job. Come back later or edit settings to revise more:</p>
+
+    {{ template "review-ahead-form" . }}
+  </div>
+</div>

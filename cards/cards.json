@@ -1,0 +1,826 @@
+[
+    {
+    "id": "card_000002",
+    "default": true,
+    "front": {
+        "type": "rich_text",
+        "content": "If $y = x^n$, \n \n then $\\displaystyle \\frac{dy}{dx} = $ ?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "$\\displaystyle \\frac{dy}{dx} = nx^{n-1}$"
+    },
+    "tags": ["year 1", "pure", "differentiation"]
+    },
+    {
+    "id": "card_000003",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "If $y = a f(x)$, \n \n then $\\displaystyle \\frac{dy}{dx} = $ ?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "$\\displaystyle \\frac{dy}{dx} = a f'(x)$"
+    },
+    "tags": ["year 1", "pure", "differentiation"]
+    },
+    {
+    "id": "card_000004",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "If $y = f(x) \\pm g(x)$, \n \n then $\\displaystyle \\frac{dy}{dx} = $ ?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "$\\displaystyle \\frac{dy}{dx} = f'(x) \\pm g'(x)$"
+    },
+    "tags": ["year 1", "pure", "differentiation"]
+    },
+    {
+    "id": "card_000005",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "If $y = e^{kx}$, \n \n then $\\displaystyle \\frac{dy}{dx} = $ ?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "$\\displaystyle \\frac{dy}{dx} = k e^{kx}$"
+    },
+    "tags": ["year 2", "pure", "differentiation"]
+    },
+    {
+    "id": "card_000006",
+    "default": true,
+    "front": {
+        "type": "rich_text",
+        "content": "If $y = a^{kx}$, \n \n then $\\displaystyle \\frac{dy}{dx} = $ ?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "$\\displaystyle \\frac{dy}{dx} = k a^{kx} ln(a)$"
+    },
+    "tags": ["year 2", "pure", "differentiation"]
+    },
+    {
+    "id": "card_000007",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "If $y = ln(kx)$, \n \n then $\\displaystyle \\frac{dy}{dx} = $ ?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "$\\displaystyle \\frac{dy}{dx} = \\frac{1}{x}$"
+    },
+    "tags": ["year 2", "pure", "differentiation"]
+    },
+    {
+    "id": "card_000008",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "If $y = sin(x)$, \n \n then $\\displaystyle \\frac{dy}{dx} = $ ?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "$\\displaystyle \\frac{dy}{dx} = cos(x)$"
+    },
+    "tags": ["year 2", "pure", "differentiation"]
+    },
+    {
+    "id": "card_000009",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "If $y = cos(x)$, \n \n then $\\displaystyle \\frac{dy}{dx} = $ ?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "$\\displaystyle \\frac{dy}{dx} = -sin(x)$"
+    },
+    "tags": ["year 2", "pure", "differentiation"]
+    },
+    {
+    "id": "card_000010",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "If $y = tan(x)$, \n \n then $\\displaystyle \\frac{dy}{dx} = $ ?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "$\\displaystyle \\frac{dy}{dx} = sec^2(x)$"
+    },
+    "tags": ["year 2", "pure", "differentiation"]
+    },
+    {
+    "id": "card_000011",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "Chain Rule: \n \n If $y = y(u(x))$, \n \n then $\\displaystyle \\frac{dy}{dx} = $ ?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "$\\displaystyle \\frac{dy}{dx} = \\frac{dy}{du} \\frac{du}{dx}$"
+    },
+    "tags": ["year 2", "pure", "differentiation"]
+},
+{
+    "id": "card_000012",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "Product Rule: If $y = u v$, \n \n then $\\displaystyle \\frac{dy}{dx} = $ ?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "$\\displaystyle \\frac{dy}{dx} = u'v + uv'$"
+    },
+    "tags": ["year 2", "pure", "differentiation"]
+},
+{
+    "id": "card_000013",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "Quotient Rule: If $\\displaystyle y = \\frac{u}{v}$, \n \n then $\\displaystyle \\frac{dy}{dx} = $ ?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "$\\displaystyle \\frac{dy}{dx} = \\frac{v u' - u v'}{v^2}$"
+    },
+    "tags": ["year 2", "pure", "differentiation"]
+},
+{
+    "id": "card_000014",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "If $\\displaystyle \\frac{dx}{dy}$ is known, \n \n then $\\displaystyle \\frac{dy}{dx} = $ ?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "$\\displaystyle \\frac{dy}{dx} = \\frac{1}{\\frac{dx}{dy}}$"
+    },
+    "tags": ["year 2", "pure", "differentiation"]
+},
+{
+    "id": "card_000015",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "If $y = cosec(x)$, \n \n then $\\displaystyle \\frac{dy}{dx} = $ ?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "$\\displaystyle \\frac{dy}{dx} = -cosec(x) cot(x)$"
+    },
+    "tags": ["year 2", "pure", "differentiation"]
+},
+{
+    "id": "card_000016",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "If $y = sec(x)$, \n \n then $\\displaystyle \\frac{dy}{dx} = $ ?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "$\\displaystyle \\frac{dy}{dx} = sec(x) tan(x)$"
+    },
+    "tags": ["year 2", "pure", "differentiation"]
+},
+{
+    "id": "card_000017",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "If $y = cot(x)$, \n \n then $\\displaystyle \\frac{dy}{dx} = $ ?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "$\\displaystyle \\frac{dy}{dx} = -cosec^2(x)$"
+    },
+    "tags": ["year 2", "pure", "differentiation"]
+},
+{
+    "id": "card_000018",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "If $y = sin^{-1}(x)$, \n \n then $\\displaystyle \\frac{dy}{dx} = $ ?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "$\\displaystyle \\frac{dy}{dx} = \\frac{1}{\\sqrt{1 - x^2}}$"
+    },
+    "tags": ["year 2", "pure", "differentiation"]
+},
+{
+    "id": "card_000019",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "If $y = cos^{-1}(x)$, \n \n then $\\displaystyle \\frac{dy}{dx} = $ ?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "$\\displaystyle \\frac{dy}{dx} = \\frac{-1}{\\sqrt{1 - x^2}}$"
+    },
+    "tags": ["year 2", "pure", "differentiation"]
+},
+{
+    "id": "card_000020",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "If $y = tan^{-1}(x)$, \n \n then $\\displaystyle \\frac{dy}{dx} = $ ?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "$\\displaystyle \\frac{dy}{dx} = \\frac{1}{1 + x^2}$"
+    },
+    "tags": ["year 2", "pure", "differentiation"]
+},
+{
+    "id": "card_000021",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "Parametric: If $x = x(t)$ and $y = y(t)$, \n \n then $\\displaystyle \\frac{dy}{dx} = $ ?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "$\\displaystyle \\frac{dy}{dx} = \\frac{\\frac{dy}{dt}}{\\frac{dx}{dt}}$"
+    },
+    "tags": ["year 2", "pure", "differentiation"]
+},
+{
+    "id": "card_000022",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "Implicit: If $y$ is defined implicitly by $f(y)$, \n \n then $\\displaystyle \\frac{d}{dx}(f(y)) = $ ?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "$\\displaystyle \\frac{d}{dx}(f(y)) = f'(y) \\frac{dy}{dx}$"
+    },
+    "tags": ["year 2", "pure", "differentiation"]
+},
+{
+    "id": "card_000025",
+    "default": true,
+    "front": {
+        "type": "rich_text",
+        "content": "How to determine the nature of a stationary point, where $f'(a) = 0$?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "- If $f''(a) > 0$: it is a local minimum.\n- If $f''(a) < 0$: it is a local maximum.\n- If $f''(a) = 0$: you cannot tell, so: \n\n- Test $f''(a-h)$ and $f''(a+h)$ for a small value, $h$:\n\n- If both $> 0$: local minimum.\n- If both $< 0$: local maximum.\n- If they change sign: point of inflection."
+    },
+    "tags": ["year 1", "pure", "differentiation"]
+},
+{
+    "id": "card_000026",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "A stationary point, $a$, is where:"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "$f'(a) = 0$"
+    },
+    "tags": ["year 1", "pure", "differentiation"]
+},
+{
+    "id": "card_000027",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "Cambourne:\n\nGeographical location?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "Coastal UK, Northern Hemisphere\nasset://large-data-set-map-uk.jpg|50%|center"
+    },
+    "assets": [
+        { "id": "large-data-set-map-uk.jpg", "type": "image", "alt": "Large data set map (UK)" }
+    ],
+    "tags": ["large data set"]
+},
+{
+    "id": "card_000028",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "Heathrow:\n\nGeographical location?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "Inland UK, Northern Hemisphere\nasset://large-data-set-map-uk.jpg|50%|center"
+    },
+    "assets": [
+        { "id": "large-data-set-map-uk.jpg", "type": "image", "alt": "Large data set map (UK)" }
+    ],
+    "tags": ["large data set"]
+},
+{
+    "id": "card_000029",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "Hurn:\n\nGeographical location?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "Coastal UK, Northern Hemisphere\nasset://large-data-set-map-uk.jpg|50%|center"
+    },
+    "assets": [
+        { "id": "large-data-set-map-uk.jpg", "type": "image", "alt": "Large data set map (UK)" }
+    ],
+    "tags": ["large data set"]
+},
+{
+    "id": "card_000030",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "Leeming:\n\nGeographical location?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "Inland UK, Northern Hemisphere\nasset://large-data-set-map-uk.jpg|50%|center"
+    },
+    "assets": [
+        { "id": "large-data-set-map-uk.jpg", "type": "image", "alt": "Large data set map (UK)" }
+    ],
+    "tags": ["large data set"]
+},
+{
+    "id": "card_000031",
+    "default": true,
+    "front": {
+        "type": "rich_text",
+        "content": "Leuchars:\n\nGeographical location?\n\nHow is it pronounced?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "Coastal UK, Northern Hemisphere\n\nPronounced 'Loo-kurs'.\nasset://large-data-set-map-uk.jpg|50%|center"
+    },
+    "assets": [
+        { "id": "large-data-set-map-uk.jpg", "type": "image", "alt": "Large data set map (UK)" }
+    ],
+    "tags": ["large data set"]
+},
+{
+    "id": "card_000032",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "Beijing:\n\nGeographical location?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "Inland, China\nasset://large-data-set-map-world.jpg"
+    },
+    "assets": [{"id": "large-data-set-map-world.jpg", "type": "image", "alt": "Large data set map (World)" }],
+    "tags": ["large data set"]
+},
+{
+    "id": "card_000033",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "Jacksonville:\n\nGeographical location?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "Coastal USA, Northern Hemisphere\nasset://large-data-set-map-world.jpg"
+    },
+    "assets": [{"id": "large-data-set-map-world.jpg", "type": "image", "alt": "Large data set map (World)" }],
+    "tags": ["large data set"]
+},
+{
+    "id": "card_000034",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "Perth:\n\nGeographical location?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "Coastal, Southern Hemisphere\nasset://large-data-set-map-world.jpg"
+    },
+    "assets": [{"id": "large-data-set-map-world.jpg", "type": "image", "alt": "Large data set map (World)" }],
+    "tags": ["large data set"]
+},
+{
+    "id": "card_000035",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "Which UK city has the hottest total mean and daily mean temperatures?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "Heathrow for both"
+    },
+    "tags": ["large data set"]
+},
+{
+    "id": "card_000036",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "Which UK city has the coldest total mean temperature?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "Leuchars"
+    },
+    "tags": ["large data set"]
+},
+{
+    "id": "card_000037",
+    "default": false,
+    "front": {
+            "type": "rich_text",
+            "content": "Which worldwide city has the hottest total mean temperature?"
+        },
+    "back": {
+        "type": "rich_text",
+        "content": "Jacksonville, USA"
+    },
+    "tags": ["large data set"]
+},
+{
+    "id": "card_000038",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "Which worldwide city has the hottest daily mean temperature?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "Beijing, China"
+    },
+    "tags": ["large data set"]
+},
+{
+    "id": "card_000040",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "Which worldwide city has the coldest total mean temperature and why?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "Perth, Australia\n\nBecause the data covers May to October, excluding Australia's summer months since it is in the southern hemisphere."
+    },
+    "tags": ["large data set"]
+},
+{
+    "id": "card_000041",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "Which is the windiest month in the UK?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "May"
+    },
+    "tags": ["large data set"]
+},
+{
+    "id": "card_000042",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "When did the Great Storm occur and how can we see this in the data?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "October 1987\n\nThe data shows a significant spike in total rainfall for that month, with a peak of 238.5mm in total in Heathrow."
+    },
+    "tags": ["large data set"]
+},
+{
+    "id": "card_000043",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "In the UK, are coastal or inland areas generally more windy?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "Coastal areas are generally more windy than inland areas."
+    },
+    "tags": ["large data set"]
+},
+{
+    "id": "card_000044",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "Where are these locations on a map:\n\n Cambourne, Heathrow, Hurn, Leeming, Leuchars, Beijing, Jacksonville, Perth"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "asset://large-data-set-map.jpg"
+    },
+    "assets": [{"id": "large-data-set-map.jpg", "type": "image", "alt": "Large data set map" }],
+    "tags": ["large data set"]
+},
+{
+    "id": "card_000045",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "<b>Daily Mean Temperature (0900-0900):</b><br><br>What are the <b>description</b>, <b>units</b>, <b>data type</b>, <b>scope</b>, (approx.) <b>range (UK/worldwide)</b>, <b>skew</b> and <b>note</b>?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "<b>Description:</b> Mean air temperature in a 24-hour period between 0900 and 0900 GMT.<br><b>Units:</b> Degrees Celsius [°C]<br><b>Data Type:</b> Real number rounded to 1 d.p.; 'n/a' means not available.<br><b>Scope:</b> Worldwide<br><b>Range UK:</b> 3.8°C (Leuchars, May-Oct 2015) to 28.7°C (Heathrow, May-Oct 2015)<br><b>Range Worldwide:</b> 2.9°C (Beijing, May-Oct 1987) to 32.5°C (Beijing, May-Oct 2015)<br><b>Skew:</b> Symmetric (normally distributed)<br><b>Note:</b> Around 0.5°C warmer in 2015 than 1987."
+    },
+    "tags": ["large data set"]
+},
+{
+    "id": "card_000046",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "<b>Daily Total Rainfall (0900-0900):</b><br><br>What are the <b>description</b>, <b>units</b>, <b>data type</b>, <b>scope</b>, (approx.) <b>range (UK/worldwide)</b>, and <b>skew</b>?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "<b>Description:</b> Total rainfall in a 24-hour period from 0900 to 0900 GMT.<br><b>Units:</b> Millimetres [mm]<br><b>Data Type:</b> Real number rounded to 1 d.p.; 'tr' means trace (&lt;0.05mm); 'n/a' means not available. Clean by removing 'n/a' and setting 'tr' to 0.0mm.<br><b>Scope:</b> Worldwide<br><b>Range UK:</b> 'tr' to 53.1mm (Heathrow, May-Oct 1987)<br><b>Range Worldwide:</b> 'tr' to 104.0mm (Perth, May-Oct 1987)<br><b>Skew:</b> Strongly positive (long right tail)"
+    },
+    "tags": ["large data set"]
+},
+{
+    "id": "card_000047",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "<b>Daily Total Sunshine (0000-2400):</b><br><br>What are the <b>description</b>, <b>units</b>, <b>data type</b>, <b>scope</b>, <b>range (UK)</b>, and <b>skew</b>?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "<b>Description:</b> Duration where brightness is above a threshold in a 24-hour period from 0000 to 2400 GMT.<br><b>Units:</b> Hours [h]<br><b>Data Type:</b> Real number rounded to 1 d.p.; 'n/a' means not available.<br><b>Scope:</b> UK only<br><b>Range UK:</b> 0 to 15.9h (Leuchars, May-Oct 2015)<br><b>Skew:</b> Symmetric (normally distributed)"
+    },
+    "tags": ["large data set"]
+},
+{
+    "id": "card_000048",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "<b>Daily Mean Windspeed (0000-2400):</b><br><br>What are the <b>description</b>, <b>units</b>, <b>data type</b>, <b>scope</b>, (approx.) <b>range (UK/worldwide)</b>, and <b>skew</b>?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "<b>Description:</b> Mean wind speed in a 24-hour period from 0000 to 2400 GMT.<br><b>Units:</b> Knots [kn] (1 kn ≈ 0.514 m/s)<br><b>Data Type:</b> Real number rounded to nearest whole number (UK), or to 1 d.p. (Overseas); 'n/a' means not available.<br><b>Scope:</b> Worldwide<br><b>Range UK:</b> 1 kn (Leeming, May-Oct 1987) to 23 kn (Leuchars, May-Oct 2015)<br><b>Range Worldwide:</b> 0.2 kn (Perth, May-Oct 1987) to 23 kn (Leuchars, May-Oct 2015)<br><b>Skew:</b> Moderately positive (long right tail)<br><b>Note:</b> Coastal cities tend to be windier than inland cities."
+    },
+    "tags": ["large data set"]
+},
+{
+    "id": "card_000049",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "<b>Daily Mean Windspeed (Beaufort conversion):</b><br><br>What are the <b>description</b>, <b>units</b>, <b>data type</b>, and <b>scope</b>?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "<b>Description:</b> Mean wind speed in a 24-hour period from 0000 to 2400 GMT, categorised using the Beaufort scale.<br><b>Units:</b> None<br><b>Data Type:</b> Qualitative: 'Light', 'Fresh', 'Moderate', 'Strong'; 'n/a' means not available.<br><b>Scope:</b> Worldwide"
+    },
+    "tags": ["large data set"]
+},
+{
+    "id": "card_000050",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "<b>Daily Maximum Gust (0000-2400):</b><br><br>What are the <b>description</b>, <b>units</b>, <b>data type</b>, <b>scope</b>, <b>range (UK)</b>, and <b>skew</b>?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "<b>Description:</b> Maximum gust of wind in a 24-hour period from 0000 to 2400 GMT.<br><b>Units:</b> Knots [kn]<br><b>Data Type:</b> Real number rounded to nearest whole number; 'n/a' means not available.<br><b>Scope:</b> UK only<br><b>Range UK:</b> 7 kn (Leuchars, May-Oct 1987) to 78 kn (Cambourne, May-Oct 2015)<br><b>Skew:</b> Strongly positive (long right tail)"
+    },
+    "tags": ["large data set"]
+},
+{
+    "id": "card_000051",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "<b>Daily Maximum Relative Humidity:</b><br><br>What are the <b>description</b>, <b>units</b>, <b>data type</b>, <b>scope</b>, <b>range (UK)</b>, and <b>skew</b>?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "<b>Description:</b> Maximum relative humidity in a 24-hour period from 0000 to 2400 GMT. Relative humidity is the amount of water in the air as a percentage of the maximum the air can hold at that temperature. Values above 95% are associated with mist and fog.<br><b>Units:</b> None<br><b>Data Type:</b> Real number rounded to nearest whole number; 'n/a' means not available.<br><b>Scope:</b> UK only<br><b>Range UK:</b> 65% (Heathrow, May-Oct 2015) to 100%<br><b>Skew:</b> Strongly negative (long left tail)"
+    },
+    "tags": ["large data set"]
+},
+{
+    "id": "card_000052",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "<b>Daily Mean Total Cloud:</b><br><br>What are the <b>description</b>, <b>units</b>, <b>data type</b>, <b>scope</b>, and <b>skew</b>?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "<b>Description:</b> Mean total cloud cover in a 24-hour period.<br><b>Units:</b> Oktas (eighths of the sky covered by cloud)<br><b>Data Type:</b> Integer from 0 to 8; 'n/a' means not available.<br><b>Scope:</b> UK only<br><b>Skew:</b> Symmetric (normally distributed)"
+    },
+    "tags": ["large data set"]
+},
+{
+    "id": "card_000053",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "<b>Daily Mean Visibility:</b><br><br>What are the <b>description</b>, <b>units</b>, <b>data type</b>, <b>scope</b>, <b>range (UK)</b>, and <b>skew</b>?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "<b>Description:</b> The mean greatest horizontal distance at which an object can be seen and recognised in daylight.<br><b>Units:</b> Decametres [dam] (1 dam = 10 m)<br><b>Data Type:</b> Real number rounded to nearest hundred; dash indicates data not available.<br><b>Scope:</b> UK only<br><b>Range UK:</b> 0 dam (Camborne, May-Oct 1987) to 6300 dam (Camborne, May-Oct 1987)<br><b>Skew:</b> Weakly positive (long right tail)"
+    },
+    "tags": ["large data set"]
+},
+{
+    "id": "card_000054",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "<b>Daily Mean Pressure:</b><br><br>What are the <b>description</b>, <b>units</b>, <b>data type</b>, <b>scope</b>, <b>mean</b>, (approx.) <b>range (UK/worldwide)</b>, and <b>skew</b>?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "<b>Description:</b> Mean pressure at sea level in a 24-hour period.<br><b>Units:</b> Hectopascals [hPa] (1 hPa = 100 Pa)<br><b>Data Type:</b> Real number rounded to nearest whole number.<br><b>Scope:</b> Worldwide<br><b>Mean:</b> 1000 hPa<br><b>Range UK:</b> 976 hPa (Leuchars, May-Oct 1987) to 1036 hPa (Camborne, May-Oct 1987)<br><b>Range Worldwide:</b> 976 hPa (Leuchars, May-Oct 1987) to 1036 hPa (Camborne, May-Oct 1987)<br><b>Skew:</b> Moderately negative (long left tail)"
+    },
+    "tags": ["large data set"]
+},
+{
+    "id": "card_000055",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "<b>Daily Mean Wind Direction:</b><br><br>What are the <b>description</b>, <b>units</b>, <b>data type</b>, <b>scope</b>, and <b>care</b>?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "<b>Description:</b> Mean wind direction in a 24-hour period, measured clockwise from north.<br><b>Units:</b> Degrees [°]<br><b>Data Type:</b> Real number rounded to nearest ten.<br><b>Scope:</b> UK only<br><b>Care:</b> This is the direction the wind is coming from, not the direction it is going."
+    },
+    "tags": ["large data set"]
+},
+{
+    "id": "card_000056",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "<b>Cardinal Direction (of the Daily Mean Wind Direction):</b><br><br>What are the <b>description</b>, <b>units</b>, <b>data type</b>, <b>scope</b>, and <b>care</b>?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "<b>Description:</b> Mean Daily Wind Direction categorised into cardinal directions.<br><b>Units:</b> None<br><b>Data Type:</b> Qualitative: 'N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', or 'NNW'.<br><b>Scope:</b> UK only<br><b>Care:</b> This is the direction the wind is coming from, not the direction it is going."
+    },
+    "tags": ["large data set"]
+},
+{
+    "id": "card_000057",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "<b>Daily Max Gust Corresponding Direction:</b><br><br>What are the <b>description</b>, <b>units</b>, <b>data type</b>, <b>scope</b>, and <b>care</b>?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "<b>Description:</b> Direction of the maximum gust of wind in a 24-hour period, measured clockwise from north.<br><b>Units:</b> Degrees [°]<br><b>Data Type:</b> Real number rounded to nearest ten.<br><b>Scope:</b> UK only<br><b>Care:</b> This is the direction the wind is coming from, not the direction it is going."
+    },
+    "tags": ["large data set"]
+},
+{
+    "id": "card_000058",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "<b>Cardinal Direction (of the Daily Max Gust Corresponding Direction):</b><br><br>What are the <b>description</b>, <b>units</b>, <b>data type</b>, <b>scope</b>, and <b>care</b>?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "<b>Description:</b> Daily Max Gust Corresponding Direction, categorised into cardinal directions.<br><b>Units:</b> None<br><b>Data Type:</b> Qualitative: 'N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', or 'NNW'.<br><b>Scope:</b> UK only<br><b>Care:</b> This is the direction the wind is coming from, not the direction it is going."
+    },
+    "tags": ["large data set"]
+},
+{
+    "id": "card_000059",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "$e^{ln(x)} = ln(e^x) = $ ?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "$e^{ln(x)} = ln(e^x) = x $"
+    },
+    "tags": ["year 1", "pure", "exponentials and logarithms"]
+},
+{
+    "id": "card_000060",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "test"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "testtest"
+    }
+},
+{
+    "id": "card_000061",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "Equation for the Mean of Grouped Data"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "Mean = $\\displaystyle \\frac{Σf x}{Σf}$,\n\nwhere f = frequency and x = midpoint of class"
+    },
+    "tags": ["year 1", "statistics", "data presentation and interpretation"]
+},
+{
+    "id": "card_000062",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "What does a function do?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "A function maps each element of a set (the domain) to exactly one element of another set (the range)."
+    },
+    "tags": ["year 1", "pure", "algebra and functions"]
+},
+{
+    "id": "card_000063",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "Which of the following types of mappings can be expressed as a function?\n\nOne-to-one\nMany-to-one\nOne-to-many\nMany-to-many"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "One-to-one - Yes ✅\nMany-to-one - Yes ✅\nOne-to-many - No ❌\nMany-to-many - No ❌"
+    },
+    "tags": ["year 2", "pure", "algebra and functions"]
+},
+{
+    "id": "card_000064",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "What to do to a many-to-one function before its inverse can be found?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "Restrict its domain so that it becomes a one-to-one function."
+    },
+    "tags": ["year 2", "pure", "algebra and functions"]
+},
+{
+    "id": "card_000065",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "Once the inverse of a function has been found, what to remember? (2)"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "1) That the range of the inverse matches the domain of the original function by restricting any $\\pm$ signs to $+$ or $-$.\n\n2) That domain is restricted to prevent undefined values due to divide by zero errors."
+    },
+    "tags": ["year 2", "pure", "algebra and functions"]
+},
+{
+    "id": "card_000066",
+    "default": false,
+    "front": {
+        "type": "rich_text",
+        "content": "Method for projectiles, A & B, colliding in 2D?"
+    },
+    "back": {
+        "type": "rich_text",
+        "content": "$\\large{\\textbf{r}}_{\\small{A}} = \\textbf{r}_{\\small{B}}$\n\nwhere $\\large{\\textbf{r}}=\\large{\\textbf{r}}_0+\\large{\\textbf{s}}$\n\nwhere:\n$\\large{\\textbf{r}}$ is the position vector at time t,\n$\\large{\\textbf{r}}_0$ is the initial position vector, and\n$\\large{\\textbf{s}}$ is the displacement vector at time t."
+    },
+    "tags": ["year 2", "mechanics", "kinematics"]
+}
+]

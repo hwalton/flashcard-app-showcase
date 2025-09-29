@@ -1,0 +1,106 @@
+{{ define "card" }}
+<div class="w-full bg-gray-100 py-0 flex justify-center">
+    <div id="flashcard-inner" class="relative bg-white shadow-lg rounded p-4 w-full max-w-2xl text-center">
+
+        <!-- Top bar inside flashcard -->
+        <div class="flex flex-col items-end text-sm w-full">
+            <!-- Status panel (top right) -->
+            <div class="flex flex-col items-end gap-1 text-gray-600 w-full">
+                <div id="status-content"
+                     class="flex flex-wrap gap-2 justify-end"
+                     hx-get="/flashcard/status?current={{ .CardStatus }}"
+                     hx-trigger="load"
+                     hx-swap="innerHTML settle:swap">
+                    <span>New: <span class="text-blue-600">{{ .New }}</span></span>
+                    <span>| In Progress: <span class="text-red-600">{{ .InProgress }}</span></span>
+                    <span>| Review: <span class="text-green-600">{{ .Review }}</span></span>
+                </div>
+
+                <!-- Tags -->
+                {{ if .Tags }}
+                <div class="flex flex-wrap justify-end gap-2">
+                    {{ range .Tags }}
+                    <span class="tag-cyan">{{ . }}</span>
+                    {{ end }}
+                </div>
+                {{ end }}
+            </div>
+            <!-- Streak display (below status panel, right aligned) -->
+            <div class="mt-1 text-gray-600 w-full flex justify-end">
+                <span>
+                    {{ .StreakEmoji }} Streak: <span class="font-bold text-orange-600">{{ .StreakCount }}</span>
+                </span>
+            </div>
+        </div>
+
+        <!-- Flashcard front/back toggle -->
+        <div id="flashcard">
+            <!-- Front -->
+            <div id="front-of-card" class="mb-2">
+                <h2 class="text-2xl font-semibold mb-4">Front:</h2>
+                <div class="text-lg text-gray-800 break-words preserve-whitespace mb-8">{{ .Front | safeHTML }}</div>
+                <button id="show-answer-button"
+                        class="bg-blue-500 text-white px-4 py-1.5 rounded hover:bg-blue-600 transition">
+                    Reveal
+                </button>
+            </div>
+
+            <!-- Back -->
+            <div id="back-of-card" style="display: none;">
+                <hr class="border-t border-gray-300 mb-6">
+                <h2 class="text-2xl font-semibold mb-4">Back:</h2>
+                <div class="text-lg text-gray-800 break-words preserve-whitespace mb-8">{{ .Back | safeHTML }}</div>
+
+                <!-- Clear any floated images -->
+                <div class="w-full" style="clear: both;"></div>
+
+                <!-- Rating buttons -->
+                <div class="mt-8 flex flex-wrap justify-center gap-4">
+                    {{ range $i, $rating := .Ratings }}
+                    <div class="flex flex-col items-center">
+                        <button 
+                            hx-post="/flashcard/answer"
+                            hx-vals='{"rating": {{ $rating.Value }}, "card_id": "{{ $.CardID }}" }'
+                            hx-target="#flashcard-inner"
+                            hx-swap="outerHTML settle:swap"
+                            class="btn-blue">
+                            {{ $rating.Label }}
+                        </button>
+                        <span class="text-xs mt-1">
+                            {{ (index $.RatingTimes $i).TimeString }}
+                        </span>
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{ if .IsOwner }}
+<script>
+document.getElementById("card-button-container").innerHTML = `
+<a href="/edit?card_id={{ .CardID }}" class="btn-blue">Edit</a>
+`;
+</script>
+{{ end }}
+
+<script>
+function attachShowAnswerButton() {
+    const btn = document.getElementById('show-answer-button');
+    if (btn) {
+        btn.addEventListener('click', function () {
+            document.getElementById('back-of-card').style.display = 'block';
+            this.style.display = 'none';
+            if (window.MathJax) MathJax.typesetPromise();
+        });
+    }
+}
+
+document.addEventListener('DOMContentLoaded', attachShowAnswerButton);
+document.body.addEventListener('htmx:afterSwap', function () {
+    attachShowAnswerButton();
+    if (window.MathJax) MathJax.typesetPromise();
+});
+</script>
+{{ end }}

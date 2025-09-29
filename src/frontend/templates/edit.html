@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Flashcard</title>
+    <link rel="stylesheet" href="/static/tailwind/output.css" />
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+</head>
+<body class="bg-gray-100 min-h-screen">
+
+    <!-- Top bar with Sign Out and Study -->
+    <div class="w-full py-1 px-4 text-sm bg-gray-100">
+        <div class="flex justify-between items-center">
+            <form action="/logout" method="POST">
+                <button type="submit"
+                        class="btn-blue">
+                    Sign Out
+                </button>
+            </form>
+
+            <a href="/"
+               class="btn-blue">
+                Study
+            </a>
+        </div>
+    </div>
+
+    <!-- Main panel -->
+    <div class="flex justify-center px-4 py-8">
+        <div class="w-full max-w-xl bg-white shadow-md rounded p-6">
+
+            <div class="flex justify-between items-start gap-4 mb-6 flex-wrap">
+                <h1 class="text-xl font-bold break-words max-w-full sm:max-w-xs word-break-all">
+                    Edit: {{ .CardID }}
+                </h1>
+                <div class="flex gap-2 items-center">
+                    {{ if .IsOwner }}
+                    <form
+                        hx-get="/confirm-delete-button-edit?card_id={{ .CardID }}"
+                        hx-target="this"
+                        hx-swap="outerHTML"
+                        class="inline"
+                    >
+                        <input type="hidden" name="card_id" value="{{ .CardID }}">
+                        <button type="submit" class="btn-blue">
+                            Delete
+                        </button>
+                    </form>
+                    {{ end }}
+                    <a href="/browse" class="btn-blue" id="browse-link">
+                        Browse
+                    </a>
+                </div>
+            </div>
+
+            <form id="edit-form" method="POST" action="/edit-card" class="space-y-4">
+                <input type="hidden" name="card_id" value="{{ .CardID }}">
+
+                <div>
+                    <label for="front" class="block font-medium mb-1">Front:</label>
+                    <textarea id="front" name="front" rows="4"
+                        class="w-full input-bordered"
+                        required>{{ .Front }}</textarea>
+                </div>
+
+                <div>
+                    <label for="back" class="block font-medium mb-1">Back:</label>
+                    <textarea id="back" name="back" rows="4"
+                        class="w-full input-bordered"
+                        required>{{ .Back }}</textarea>
+                </div>
+
+                <div>
+                    <label for="tags" class="block font-medium mb-1">Tags:</label>
+                    <input type="text" id="tags" name="tags"
+                        class="w-full input-bordered"
+                        placeholder="e.g. tag1, tag2, tag3"
+                        value="{{ .Tags }}">
+                </div>
+
+                <div class="flex flex-wrap items-center justify-between gap-4">
+                    <div>
+                        <button type="submit"
+                                class="btn-blue"
+                                formaction="/goto?card_id={{ .CardID }}">
+                            Save &amp; Study
+                        </button>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        {{ if .ErrorMessage }}
+                        <div class="text-red-700 text-sm bg-red-100 border border-red-400 px-3 py-2 rounded w-fit max-w-xs">
+                            {{ .ErrorMessage }}
+                        </div>
+                        {{ end }}
+                    </div>
+                    <div class="flex gap-2">
+                        <button type="button" class="btn-blue" id="revert-btn">
+                            Revert
+                        </button>
+                        <button type="submit"
+                                class="btn-blue">
+                            Save
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById('edit-form');
+    const browseLink = document.getElementById('browse-link');
+    let isDirty = false;
+
+    // Store initial values for revert
+    const initial = {
+        front: form.elements['front'].value,
+        back: form.elements['back'].value,
+        tags: form.elements['tags'].value
+    };
+
+    // Mark form as dirty if any input changes
+    form.addEventListener('input', function() {
+        isDirty = true;
+    });
+
+    // When the form is submitted, reset dirty flag
+    form.addEventListener('submit', function() {
+        isDirty = false;
+    });
+
+    // Intercept browse link if form is dirty
+    browseLink.addEventListener('click', function(e) {
+        if (isDirty) {
+            const proceed = confirm("You have unsaved changes. If you leave, your changes will be lost. Continue?");
+            if (!proceed) {
+                e.preventDefault();
+            }
+        }
+    });
+
+    // Handle revert button
+    const revertBtn = document.getElementById('revert-btn');
+    revertBtn.addEventListener('click', function() {
+        if (isDirty) {
+            const confirmRevert = confirm("Are you sure? All changes will be lost.");
+            if (!confirmRevert) return;
+        }
+        form.elements['front'].value = initial.front;
+        form.elements['back'].value = initial.back;
+        form.elements['tags'].value = initial.tags;
+        isDirty = false;
+    });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browse Flashcards</title>
+
+    <link rel="stylesheet" href="/static/tailwind/output.css" />
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+    <!-- Top bar with Sign Out and Study -->
+    <div class="w-full py-1.5 px-4 text-sm bg-gray-100">
+        <div class="flex justify-between items-center">
+            <!-- Left side -->
+            <div class="flex items-center gap-4">
+                <form action="/logout" method="POST">
+                    <button type="submit" class="btn-blue">Sign Out</button>
+                </form>
+            </div>
+
+            <!-- Right side -->
+            <a href="/" class="btn-blue">Study</a>
+        </div>
+    </div>
+
+    <!-- Main panel -->
+    <div class="flex justify-center px-4 py-2">
+        <div class="w-full max-w-5xl bg-white shadow-md rounded p-6">
+            <div class="flex justify-between items-center mb-6">
+                <h1 class="text-xl font-bold">Browse Flashcards</h1>
+                <a href="/create" class="btn-blue">Create Flashcard</a>
+            </div>
+
+            <!-- Search Bar -->
+            <form method="GET" action="/browse" class="mb-6 flex gap-2">
+                <input type="text" name="query" placeholder="Search cards..."
+                       value="{{ .Query }}"
+                       class="w-full input-bordered" />
+                <button type="submit" class="btn-blue">Search</button>
+            </form>
+
+            <!-- Flashcard list -->
+            <div id="card-list">
+                {{ range .Flashcards }}
+                    {{ template "flashcard-item.html" . }}
+                {{ end }}
+
+                {{ if .HasMore }}
+                <!-- Load More Button -->
+                <form
+                    hx-get="/browse?query={{ .Query }}&offset={{ .NextOffset }}"
+                    hx-target="this"
+                    hx-swap="outerHTML"
+                    class="flex justify-center mt-8"
+                >
+                    <button type="submit"
+                            class="btn-blue">
+                        Load More
+                    </button>
+                </form>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

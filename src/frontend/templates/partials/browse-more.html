@@ -1,0 +1,17 @@
+{{ range .Flashcards }}
+    {{ template "flashcard-item.html" . }}
+{{ end }}
+
+{{ if .HasMore }}
+<!-- Load More Button -->
+<form
+  hx-get="/browse?query={{ .Query }}&offset={{ .NextOffset }}"
+  hx-target="this"
+  hx-swap="outerHTML"
+  class="flex justify-center mt-8"
+>
+  <button type="submit" class="btn-blue">
+    Load More
+  </button>
+</form>
+{{ end }}

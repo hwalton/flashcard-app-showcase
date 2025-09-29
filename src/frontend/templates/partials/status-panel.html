@@ -1,0 +1,17 @@
+<span>New: 
+    <span class="new text-blue-600 {{if eq .CardStatus "New"}}underline underline-offset-4 decoration-1{{end}}">
+        {{ .New }}
+    </span>
+</span>
+
+<span>| In Progress: 
+    <span class="in-progress text-red-600 {{if eq .CardStatus "InProgress"}}underline underline-offset-4 decoration-1{{end}}">
+        {{ .InProgress }}
+    </span>
+</span>
+
+<span>| Consolidating: 
+    <span class="review text-green-600 {{if eq .CardStatus "Review"}}underline underline-offset-4 decoration-1{{end}}">
+        {{ .Review }}
+    </span>
+</span>

@@ -1,0 +1,42 @@
+{{ define "base" }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ block "title" . }}Flashcards App{{ end }}</title>
+  <link rel="stylesheet" href="/static/tailwind/output.css" />
+
+  <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+      }
+    };
+  </script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="bg-gray-100 min-h-screen">
+  <!-- Top bar -->
+  <div class="bg-gray-100 w-full py-1.5 px-4 text-sm">
+    <div class="flex justify-between items-center">
+      <form action="/logout" method="POST">
+        <button type="submit" class="btn-blue">
+          Sign Out
+        </button>
+      </form>
+      <a href="/browse" class="btn-blue">
+        Browse
+      </a>
+    </div>
+  </div>
+
+  {{ block "content" . }}{{ end }}
+</body>
+</html>
+{{ end }}

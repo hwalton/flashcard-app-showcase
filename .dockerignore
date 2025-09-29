@@ -1,0 +1,16 @@
+# Ignore unnecessary files when building
+node_modules
+frontend/static/js/dev_build
+*.log
+*.tmp
+__pycache__/
+.git
+.gitignore
+Dockerfile
+docker-compose.yml
+utils_dev/
+utils_prod/
+migrations/
+README.md
+supabase-auth-emails
+cards

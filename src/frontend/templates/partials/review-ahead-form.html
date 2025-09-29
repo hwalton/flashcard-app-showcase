@@ -1,0 +1,119 @@
+{{ define "review-ahead-form" }}
+<form
+  hx-post="/flashcard/review-ahead"
+  hx-swap="none"
+  hx-on::after-request="window.location.href = '/goto'"
+  class="flex flex-col items-center gap-4"
+>
+  {{ if .UserTags }}
+  <div class="mb-4 w-full">
+    <h3 class="text-lg font-semibold mb-2 text-center">Tags from your cards:</h3>
+
+    <!-- Tag container -->
+    <div id="tag-container" class="relative max-h-[4.8rem] overflow-hidden transition-all duration-300">
+      <div class="flex flex-wrap gap-2 justify-center">
+        {{ range .UserTags }}
+        <span class="tag-cyan">{{ . }}</span>
+        {{ end }}
+      </div>
+      <div id="tag-gradient" class="absolute bottom-0 left-0 w-full h-6 bg-gradient-to-t from-gray-100 to-transparent pointer-events-none hidden"></div>
+    </div>
+
+    <div class="text-center mt-2">
+      <button type="button"
+              id="tag-toggle-btn"
+              class="btn-blue-compact hidden"
+              onclick="toggleTagOverflow()">
+        Show More
+      </button>
+    </div>
+  </div>
+  {{ end }}
+
+  <!-- Review Ahead Fields -->
+  <div class="flex flex-col gap-4 mx-auto">
+
+    <!-- Tag Filter Input -->
+    <div class="flex items-center gap-3 w-full">
+      <label for="tag_filter" class="text-sm font-medium w-52 text-right">Only show cards with tags:</label>
+      <input
+        type="text"
+        id="tag_filter"
+        name="tag_filter"
+        class="input-bordered text-center w-full"
+        placeholder="e.g. tag1, tag2, tag3"
+        value="{{ .CurrentTagFilter }}"
+      />
+    </div>
+
+    <div class="flex items-center gap-3 w-full">
+      <label for="days" class="text-sm font-medium w-52 text-right">Review Ahead:</label>
+      <input
+        type="number"
+        id="days"
+        name="days"
+        min="0"
+        class="input-bordered text-center w-full"
+        placeholder="{{ .CurrentDays }}"
+      />
+    </div>
+
+    <div class="flex items-center gap-3 w-full">
+      <label for="new_max" class="text-sm font-medium w-52 text-right">Max New Cards Today:</label>
+      <input
+        type="number"
+        id="new_max"
+        name="new_max"
+        min="0"
+        class="input-bordered text-center w-full"
+        placeholder="{{ .CurrentMax }}"
+      />
+    </div>
+  </div>
+
+  <div class="flex justify-between gap-4 pt-4">
+    {{ if .ShowCancel }}
+    <a href="/goto" class="btn-blue">Cancel</a>
+    <button type="submit" class="btn-blue">Save</button>
+    {{ else }}
+    <button type="submit" class="btn-blue">Set</button>
+    {{ end }}
+  </div>
+</form>
+
+<!-- Overflow detection -->
+<script>
+  function toggleTagOverflow() {
+    const container = document.getElementById('tag-container');
+    const gradient = document.getElementById('tag-gradient');
+    const button = document.getElementById('tag-toggle-btn');
+
+    const isCollapsed = container.classList.contains('max-h-[4.8rem]');
+    container.classList.toggle('max-h-[4.8rem]');
+    container.classList.toggle('max-h-none');
+    gradient.classList.toggle('hidden');
+
+    button.textContent = isCollapsed ? 'Show Less' : 'Show More';
+  }
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('tag-container');
+    if (!container) return; // Prevent error if tag-container is missing
+
+    const content = container.firstElementChild;
+    const toggleButton = document.getElementById('tag-toggle-btn');
+    const gradient = document.getElementById('tag-gradient');
+
+    // Use precise height detection
+    const overflows = content.scrollHeight > container.getBoundingClientRect().height + 2;
+
+    if (overflows) {
+      toggleButton.classList.remove('hidden');
+      gradient.classList.remove('hidden');
+    } else {
+      toggleButton.classList.add('hidden');
+      gradient.classList.add('hidden');
+    }
+  });
+</script>
+{{ end }}
