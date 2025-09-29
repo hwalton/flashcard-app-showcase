@@ -1,13 +1,24 @@
-# Download Make. (Makefile)
+# Overview
 
-# Install AIR (on restart):
+This is a web application for creating and studying flashcards. It is built with:
+
+- `Go` for the backend API
+- `Supabase` for the database and authentication
+- `HTMX`, with `Tailwind CSS` and `DaisyUI` for the frontend
+- `Docker` for containerization
+
+# Setup
+
+## Download Make. (Makefile)
+
+## Install AIR (on restart):
 ```
 export PATH=$HOME/go/bin:/usr/local/go/bin:$PATH
 export PATH="$HOME/go/bin:$PATH"
 source ~/.bashrc
 ```
 
-# Development:
+## Development:
 ```
 make watch-css
 cd src/
@@ -15,14 +26,14 @@ air
 ```
 
 
-# Build for production:
+## Build for production:
 
 ```
 make build-css
 docker build -f Dockerfile -t flashcards-app .
 ```
 
-# Set up Supabase:
+## Set up Supabase:
 - Create bucket `flashcard-assets` in Supabase Storage.
 - Create bucket policy on `flashcard-assets`:
     - Full customisation
